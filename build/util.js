@@ -4,7 +4,7 @@ const createFiles = function () {
     const path = require('path');
     const glob = require('glob');
     let result = [];
-    let files = glob.sync(path.join(__dirname, '../src/views/**/*.html'));
+    let files = glob.sync(path.join(__dirname, '../src/**/*.html'));
     for (let file of files) {
         result.push({
             name: file.match(/\w{0,}(?=\.html)/)[0],
@@ -19,8 +19,8 @@ const plugins = function () {
     const path = require('path');
     let files = createFiles();
     const glob = require('glob');
-    let commonJS = glob.sync(path.join(__dirname, '../utils/*.js'));
-    let entries = glob.sync(path.join(__dirname, '../src/views/**/*.js'));
+
+    let entries = glob.sync(path.join(__dirname, '../src/**/*.js'));
     const HtmlWebpackPlugin = require('html-webpack-plugin');
     const CopyPlugin = require('copy-webpack-plugin');
 
@@ -31,10 +31,8 @@ const plugins = function () {
     let htmlPlugins = [];
     let Entries = {};
 
-    let utils=[];
 
-
-    for(let chunk of [...commonJS,...entries]){
+    for(let chunk of [...entries]){
         let chunkname=path.parse(chunk).name;
         Entries[chunkname] =chunk;
     }
@@ -50,7 +48,7 @@ const plugins = function () {
             new HtmlWebpackPlugin({
                 filename: `${file.name}.html`,
                 template: file.templatePath,
-                chunks: [...utils,file.name]
+                chunks: ['index',file.name]
             })
         )
     }
