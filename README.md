@@ -1,25 +1,27 @@
 # webpack-multi-pages
 针对多页面的webpack配置
 
+
+### 项目结构
 build  
-  |  
-  util  //配置文件的一些方法  
-  webpack.base.js  //公共配置文件  
-  webpack.dev.js   //开发环境配置文件  
-  webpack.prod.js  //生产环境配置文件  
+&nbsp;&nbsp;|  
+&nbsp;&nbsp;util  //配置文件的一些方法  
+&nbsp;&nbsp;webpack.base.js  //公共配置文件  
+&nbsp;&nbsp;webpack.dev.js   //开发环境配置文件  
+&nbsp;&nbsp;webpack.prod.js  //生产环境配置文件  
 src  
-  |  
-  views  
-     |  
-     home //页面内容   每一个页面一个文件夹  其中包含html js  css   注：css通过模块在js中引入  
-      |  
-      home.index  
-      home.js  
-      home.css  
+&nbsp;&nbsp;|  
+&nbsp;&nbsp;views  
+&nbsp;&nbsp;|  
+&nbsp;&nbsp;home //页面内容   每一个页面一个文件夹  其中包含html js  css   注：css通过模块在js中引入  
+&nbsp;&nbsp;|  
+&nbsp;&nbsp;home.index  
+&nbsp;&nbsp;home.js  
+&nbsp;&nbsp;home.css  
 static  //静态资源文件夹  
-   |  
-   font  
-   image  
+&nbsp;&nbsp;|  
+&nbsp;&nbsp;font  
+&nbsp;&nbsp;image  
 utils //公共js文件  
 
 
