@@ -7,7 +7,7 @@ build
   webpack.base.js  //公共配置文件
   webpack.dev.js   //开发环境配置文件
   webpack.prod.js  //生产环境配置文件
-src
+src  
   |
   views
      |
@@ -23,7 +23,7 @@ static  //静态资源文件夹
 utils //公共js文件
 
 
-打包后的项目结构
+###打包后的项目结构
 
 css //单独提取的css
 js  //所有js文件
