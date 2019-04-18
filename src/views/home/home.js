@@ -1,1 +1,1 @@
-console.log(232323232)
+import './home.less'

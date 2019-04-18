@@ -13,10 +13,10 @@ module.exports = {
     },
     module: {
         rules: [
-            // {
-            //     test: /\.html$/,
-            //     use: ['html-loader']
-            // },
+            {
+                test: /\.html$/,
+                use: ['html-loader']
+            },
             {
                 test:/\.js$/,
                 exclude:[path.resolve(__dirname,'../node_modules')],
@@ -33,7 +33,8 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        outputPath: 'static/images/'
+                        name: 'static/images/[name].[hash:7].[ext]',
+                        publicPath:'../'
                     }
                 }],
             },
@@ -42,7 +43,8 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        outputPath: 'static/font/'
+                        name: 'static/fonts/[name].[hash:7].[ext]',
+                        publicPath:'../'
                     }
                 }]
             },
@@ -51,7 +53,8 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        outputPath: 'static/assert/'
+                        name: 'static/media/[name].[hash:7].[ext]',
+                        publicPath:'../'
                     }
                 }],
             },
