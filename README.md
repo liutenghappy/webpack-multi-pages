@@ -11,15 +11,14 @@ build
 &nbsp;&nbsp;webpack.prod.js  //生产环境配置文件  
 src  
 &nbsp;&nbsp;|  
-&nbsp;&nbsp;index.html //入口页面  
-&nbsp;&nbsp;index.js&nbsp;&nbsp;//**(最好不要改名)**统一js入口文件  
+&nbsp;&nbsp;main.js&nbsp;&nbsp;// **(最好不要改名)** 统一js入口文件  
 &nbsp;&nbsp;views  
 &nbsp;&nbsp;|  
-&nbsp;&nbsp;home //页面内容   每一个页面一个文件夹  其中包含html js  css   注：css通过模块在js中引入  
+&nbsp;&nbsp;index //页面内容   每一个页面一个文件夹  其中包含html js  css   注：css通过模块在js中引入  
 &nbsp;&nbsp;|  
-&nbsp;&nbsp;home.index  
-&nbsp;&nbsp;home.js  
-&nbsp;&nbsp;home.css  
+&nbsp;&nbsp;index.html//默认index.html为入口页面  
+&nbsp;&nbsp;index.js  
+&nbsp;&nbsp;index.less  
 static  //静态资源文件夹  
 &nbsp;&nbsp;|  
 &nbsp;&nbsp;font  

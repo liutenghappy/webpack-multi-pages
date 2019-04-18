@@ -48,7 +48,7 @@ const plugins = function () {
             new HtmlWebpackPlugin({
                 filename: `${file.name}.html`,
                 template: file.templatePath,
-                chunks: ['index',file.name]
+                chunks: ['main',file.name]
             })
         )
     }
