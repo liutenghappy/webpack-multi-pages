@@ -4,8 +4,8 @@ const util = require('./util');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 
+
 module.exports = {
-    // mode: "development",
     entry: util.plugins.Entries,
     output: {
         filename: './js/[name].bundle.js',
