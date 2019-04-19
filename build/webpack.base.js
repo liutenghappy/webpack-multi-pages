@@ -13,10 +13,10 @@ module.exports = {
     },
     module: {
         rules: [
-            // {
-            //     test: /\.html$/,
-            //     use: ['html-loader']
-            // },
+            {
+                test: /\.html$/,
+                use: ['html-loader']
+            },
             {
                 test:/\.js$/,
                 exclude:[path.resolve(__dirname,'../node_modules')],
