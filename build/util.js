@@ -37,9 +37,9 @@ const plugins = function () {
         Entries[chunkname] =chunk;
     }
 
-    for(let util of [...commonJS]){
-        utils.push(path.parse(util).name)
-    }
+    // for(let util of [...commonJS]){
+    //     utils.push(path.parse(util).name)
+    // }
 
 
 
@@ -63,16 +63,16 @@ const plugins = function () {
                 filename: "./css/[name].css",
                 chunkFilename: './css/[id].css',
             }),
-            new CopyPlugin([
-                {
-                    // 源文件目录
-                    from: path.join(__dirname, '../static'),
-                    // 目标目录 dist目录下
-                    to: 'static',
-                    // 筛选过滤，这里复制所有文件，连同文件夹
-                    ignore: ['.*']
-                }
-            ])
+            // new CopyPlugin([
+            //     {
+            //         // 源文件目录
+            //         from: path.join(__dirname, '../static'),
+            //         // 目标目录 dist目录下
+            //         to: 'static',
+            //         // 筛选过滤，这里复制所有文件，连同文件夹
+            //         ignore: ['.*']
+            //     }
+            // ])
         ],
         Entries
     }
