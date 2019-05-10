@@ -33,8 +33,8 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        name: 'static/images/[name].[hash:7].[ext]',
-                        publicPath:'../'
+                        name: '[name].[hash:7].[ext]',
+                        outputPath:'./static/images'
                     }
                 }],
             },
@@ -61,7 +61,12 @@ module.exports = {
             {
                 test: /\.(le|c)ss$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options:{
+                            publicPath:'../'
+                        }
+                    },
                     'css-loader',
                     'less-loader'
                 ]
